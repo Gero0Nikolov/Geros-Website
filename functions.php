@@ -143,16 +143,30 @@ add_action( 'widgets_init', 'geros_widgets_init' );
  * Enqueue scripts and styles.
  */
 function geros_scripts() {
+	$_ASSETS_VERSION = date( "YmdHis" );
+
+	// Default Styling
 	wp_enqueue_style( 'geros-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'geros-style', 'rtl', 'replace' );
+	wp_enqueue_style( "geros-animations", get_template_directory_uri() ."/assets/styles/animate.css", array(), $_ASSETS_VERSION );
 
-	wp_enqueue_script( 'geros-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
-	wp_enqueue_script( 'geros-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), _S_VERSION, true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+	// Load Device Styles
+	if ( 
+		!is_mobile() &&
+		!is_tablet()
+	) {
+		wp_enqueue_style( "geros-desktop", get_template_directory_uri() ."/assets/styles/desktop.css", array(), $_ASSETS_VERSION );
+	} else if ( is_mobile() ) {
+		wp_enqueue_style( "geros-mobile", get_template_directory_uri() ."/assets/styles/mobile.css", array(), $_ASSETS_VERSION );
+	} else if ( is_tablet() ) {
+		wp_enqueue_style( "geros-tablet", get_template_directory_uri() ."/assets/styles/tablet.css", array(), $_ASSETS_VERSION );
 	}
+
+	// Load Fonts
+	wp_enqueue_style( "geros-fonts", get_template_directory_uri() ."/assets/styles/fonts.css", array(), $_ASSETS_VERSION );
+
+	// Load Scripts
+	wp_enqueue_script( "geros-main", get_template_directory_uri() ."/assets/scripts/main.js", array( "jquery" ), $_ASSETS_VERSION, false );
 }
 add_action( 'wp_enqueue_scripts', 'geros_scripts' );
 
@@ -183,3 +197,90 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Get View Method
+function get_view( $view_name ) {
+	$path = get_template_directory();
+
+	// Set the correct path
+	if (
+		!is_mobile() &&
+		!is_tablet()
+	) { // Desktop
+		$path .= "/views/desktop/". $view_name .".php";
+	} elseif ( is_mobile() ) { // Mobile
+		$path .= "/views/mobile/". $view_name .".php";
+	} elseif ( is_tablet() ) { // Tablet
+		$path .= "/views/tablet/". $view_name .".php";
+	}
+
+	// Check if the View exists and require the view
+	if ( file_exists( $path ) ) {
+		require_once $path;
+	}
+}
+
+// Get Default Thumbnail Method
+function get_default_thumbnail() {
+	return get_template_directory_uri() ."/assets/images/wav.jpg";
+}
+
+// Searc for Method
+add_action( "wp_ajax_search_for", "search_for" );
+add_action( "wp_ajax_nopriv_search_for", "search_for" );
+function search_for() {
+	$query = isset( $_POST[ "query" ] ) && !empty( $_POST[ "query" ] ) ? sanitize_text_field( $_POST[ "query" ] ) : false;
+	$response = false;
+	
+	if ( $query != false ) {
+		global $wpdb;
+		$posts = $wpdb->prefix ."posts";
+
+		$sql_ = "SELECT ID, post_title, post_type FROM $posts WHERE post_title LIKE '$query%' AND post_status='publish' AND (post_type='page' OR post_type='post' OR post_type='projects') ORDER BY ID DESC";
+		$results_ = $wpdb->get_results( $sql_, OBJECT );
+
+		if ( !empty( $results_ ) ) {
+			$response = array();
+
+			foreach ( $results_ as $result_ ) {
+				$object_ = new stdClass;
+				$object_->id = $result_->ID;
+				$object_->title = $result_->post_title;
+				$object_->url = get_permalink( $result_->ID );
+				$object_->icon = get_result_icon( $result_->post_type );
+				$object_->color = get_result_color( $result_->post_type );
+				array_push( $response, $object_ );
+			}
+		}
+	}
+
+	echo json_encode( $response );
+	die( "" );
+}
+
+function get_result_icon( $post_type ) {
+	$result = false;
+
+	if ( $post_type == "post" ) {
+		$page = get_page_by_path( "articles" );
+		$result = get_field( "page_icon", $page->ID );
+	} elseif ( $post_type == "projects" ) {
+		$page = get_page_by_path( "ideas" );
+		$result = get_field( "page_icon", $page->ID );
+	}
+
+	return $result;
+}
+
+function get_result_color( $post_type ) {
+	$result = false;
+
+	if ( $post_type == "post" ) {
+		$page = get_page_by_path( "articles" );
+		$result = get_field( "page_color", $page->ID );
+	} elseif ( $post_type == "projects" ) {
+		$page = get_page_by_path( "ideas" );
+		$result = get_field( "page_color", $page->ID );
+	}
+
+	return $result;
+}
