@@ -36,12 +36,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 20%;
     height: 100vh;
     background: $menu;
     padding: 5vh;
     vertical-align: top;
+    transform: translateZ(0);
 
     .upper-context,
     .lower-context {
@@ -150,12 +153,8 @@ body {
     vertical-align: top;
     position: relative;
     width: 80%;
-    height: 100vh;
     padding: 5vh;
-
-    -webkit-overflow-scrolling: touch;
-    overflow-x: hidden;
-    overflow-y: auto;
+    margin-left: 20%;
 
     .search-container {
         display: flex;
