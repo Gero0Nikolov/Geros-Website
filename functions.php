@@ -264,7 +264,7 @@ function get_result_icon( $post_type ) {
 		$page = get_page_by_path( "articles" );
 		$result = get_field( "page_icon", $page->ID );
 	} elseif ( $post_type == "projects" ) {
-		$page = get_page_by_path( "ideas" );
+		$page = get_page_by_path( "projects" );
 		$result = get_field( "page_icon", $page->ID );
 	}
 
@@ -278,8 +278,20 @@ function get_result_color( $post_type ) {
 		$page = get_page_by_path( "articles" );
 		$result = get_field( "page_color", $page->ID );
 	} elseif ( $post_type == "projects" ) {
-		$page = get_page_by_path( "ideas" );
+		$page = get_page_by_path( "projects" );
 		$result = get_field( "page_color", $page->ID );
+	}
+
+	return $result;
+}
+
+function get_default_title() {
+	$result = "";
+
+	if ( is_singular( "post" ) ) {
+		$result = "Enjoy the read!";
+	} elseif ( is_singular( "projects" ) ) {
+		$result = "Feel the idea!";
 	}
 
 	return $result;
