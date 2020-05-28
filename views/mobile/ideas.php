@@ -1,11 +1,10 @@
 <div class="content-container animated fadeIn">
     <?php 
-    get_view( "search" ); 
-    
-    // Get Articles
+    get_view( "search" );
+
     $args = array(
         "posts_per_page" => -1,
-        "post_type" => "post",
+        "post_type" => "projects",
         "post_status" => "publish",
         "orderby" => "post_date",
         "order" => "DESC"
@@ -13,24 +12,17 @@
     $posts = get_posts( $args );
     ?>
 
-    <div id="posts-container" class="posts-container">
+    <div id="projects-posts-container" class="projects-posts-container padding-side">
         <?php
         foreach ( $posts as $post ) {
             $object_ = new stdClass;
             $object_->id = $post->ID;
             $object_->title = $post->post_title;
-            $object_->content = wp_trim_words( $post->post_content, 55, "..." );
             $object_->thumbnail = get_the_post_thumbnail_url( $post->ID, "full" );
-            $object_->date = date( "d M Y", strtotime( $post->post_date ) );
             $object_->url = get_permalink( $post->ID );
             ?>
 
-            <div id="post-<?php echo $object_->id; ?>" class="post-<?php echo $object_->id; ?> article">
-                <span class="date">
-                    <a href="<?php echo $object_->url; ?>" class="invisible-anchor">
-                        <?php echo $object_->date; ?>
-                    </a>
-                </span>
+            <div id="project-<?php echo $object_->id; ?>" class="project-<?php echo $object_->id; ?> project">
                 <a href="<?php echo $object_->url; ?>" class="invisible-anchor">
                     <img src="<?php echo !empty( $object_->thumbnail ) ? $object_->thumbnail : get_default_thumbnail(); ?>" class="thumbnail" alt="<?php echo $object_->title; ?> thumbnail image." />
                 </a>
@@ -39,11 +31,6 @@
                         <?php echo $object_->title; ?>
                     </a>
                 </h2>
-                <div class="excerpt">
-                    <a href="<?php echo $object_->url; ?>" class="invisible-anchor">
-                        <?php echo $object_->content; ?>
-                    </a>
-                </div>
             </div>
 
             <?php

@@ -6,7 +6,7 @@
         "posts_per_page" => -1,
         "post_type" => "projects",
         "post_status" => "publish",
-        "orderby" => "ID",
+        "orderby" => "post_date",
         "order" => "DESC"
     );
     $posts = get_posts( $args );

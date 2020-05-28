@@ -9,6 +9,7 @@ var searchTriggered = false;
 var sendTriggered = false;
 
 jQuery( document ).ready( function(){
+    setViewPortStyle();
     setSearchBox();
     setContactMeBox();
 } );
@@ -124,4 +125,27 @@ function setContactMeBox() {
             }
         } );
     }
+}
+
+function setViewPortStyle() {
+    if ( isMobile() ) {
+        if ( window.innerHeight > window.innerWidth ) {
+            jQuery( "body" ).addClass( "portrait" );
+        } else {
+            jQuery( "body" ).addClass( "landscape" );
+        }
+
+        window.addEventListener( "orientationchange", function() {
+            if ( window.innerHeight > window.innerWidth ) {
+                jQuery( "body" ).removeClass( "portrait" ).addClass( "landscape" );
+            } else {
+                jQuery( "body" ).removeClass( "landscape" ).addClass( "portrait" );
+            }
+        } );
+    }
+}
+
+function isMobile() {
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { return true; }
+    else { return false; }
 }

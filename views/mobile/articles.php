@@ -26,20 +26,20 @@
             ?>
 
             <div id="post-<?php echo $object_->id; ?>" class="post-<?php echo $object_->id; ?> article">
-                <span class="date">
+                <span class="date padding-side">
                     <a href="<?php echo $object_->url; ?>" class="invisible-anchor">
                         <?php echo $object_->date; ?>
                     </a>
                 </span>
-                <a href="<?php echo $object_->url; ?>" class="invisible-anchor">
+                <a href="<?php echo $object_->url; ?>" class="invisible-anchor  padding-side">
                     <img src="<?php echo !empty( $object_->thumbnail ) ? $object_->thumbnail : get_default_thumbnail(); ?>" class="thumbnail" alt="<?php echo $object_->title; ?> thumbnail image." />
                 </a>
-                <h2 class="title">
+                <h2 class="title padding-side">
                     <a href="<?php echo $object_->url; ?>" class="invisible-anchor">
                         <?php echo $object_->title; ?>
                     </a>
                 </h2>
-                <div class="excerpt">
+                <div class="excerpt padding-side">
                     <a href="<?php echo $object_->url; ?>" class="invisible-anchor">
                         <?php echo $object_->content; ?>
                     </a>
