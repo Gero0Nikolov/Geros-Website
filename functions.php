@@ -224,7 +224,7 @@ function get_default_thumbnail() {
 	return get_template_directory_uri() ."/assets/images/wav.jpg";
 }
 
-// Searc for Method
+// Search for Method
 add_action( "wp_ajax_search_for", "search_for" );
 add_action( "wp_ajax_nopriv_search_for", "search_for" );
 function search_for() {
@@ -235,7 +235,7 @@ function search_for() {
 		global $wpdb;
 		$posts = $wpdb->prefix ."posts";
 
-		$sql_ = "SELECT ID, post_title, post_type FROM $posts WHERE post_title LIKE '$query%' AND post_status='publish' AND (post_type='page' OR post_type='post' OR post_type='projects') ORDER BY ID DESC";
+		$sql_ = "SELECT ID, post_title, post_type FROM $posts WHERE post_title LIKE '%$query%' AND post_status='publish' AND (post_type='page' OR post_type='post' OR post_type='projects') ORDER BY ID DESC";
 		$results_ = $wpdb->get_results( $sql_, OBJECT );
 
 		if ( !empty( $results_ ) ) {
@@ -251,6 +251,36 @@ function search_for() {
 				array_push( $response, $object_ );
 			}
 		}
+	}
+
+	echo json_encode( $response );
+	die( "" );
+}
+
+// Make Contact Method
+add_action( "wp_ajax_make_contact", "make_contact" );
+add_action( "wp_ajax_nopriv_make_contact", "make_contact" );
+function make_contact() {
+	$data = isset( $_POST[ "data" ] ) && !empty( $_POST[ "data" ] ) ? (object) $_POST[ "data" ] : false;
+	$response = false;
+
+	if (
+		!empty( $data->name ) &&
+		(
+			!empty( $data->email ) &&
+			is_email( $data->email )
+		) &&
+		!empty( $data->reason ) &&
+		!empty( $data->message )
+	) {
+		$homepage_id = get_option( "page_on_front" );
+		$email = get_field( "admin_email", $homepage_id );	
+		wp_mail(
+			$email,
+			"New Contact Request from GeroNikolov.com",
+			"Name: ". $data->name ." (". $data->email .")\r\nReason: ". ucfirst( $data->reason ) ."\r\nMessage: \r\n". $data->message
+		);
+		$response = true;
 	}
 
 	echo json_encode( $response );

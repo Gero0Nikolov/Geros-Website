@@ -1,12 +1,16 @@
 // Cache Containers
 var $searchContainer;
 var $searchBox;
+var $contactMeBox;
+var $contactMeSend;
 
 // Cache Variables
 var searchTriggered = false;
+var sendTriggered = false;
 
 jQuery( document ).ready( function(){
     setSearchBox();
+    setContactMeBox();
 } );
 
 function setSearchBox() {
@@ -60,6 +64,55 @@ function setSearchBox() {
 
                                         $searchContainer.find( "#results" ).append( view );
                                     }
+                                }
+                            }
+                        },
+                        error: function( response ) {
+                            console.log( response );
+                        }
+                    } );
+                }
+            }
+        } );
+    }
+}
+
+function setContactMeBox() {
+    if ( jQuery( "#contactme-container" ).length > 0 ) {
+        $contactMeBox = jQuery( "#contactme-container" );
+        $contactMeSend = jQuery( "#contactme-container #send" );
+
+        $contactMeSend.on( "click", function() {
+            if ( !sendTriggered ) {
+                let data = {
+                    name: $contactMeBox.find( "#name" ).val().trim(),
+                    email: $contactMeBox.find( "#email" ).val().trim(),
+                    reason: $contactMeBox.find( "#reason" ).val().trim(),
+                    message: $contactMeBox.find( "#message" ).val().trim()
+                };
+        
+                if (
+                    data.name.length > 0 &&
+                    data.email.length > 0 &&
+                    data.reason.length > 0 &&
+                    data.message.length > 0
+                ) {
+                    sendTriggered = true;
+                    $contactMeSend.attr( "disabled", "disabled" );
+
+                    jQuery.ajax( {
+                        url: ajax_url,
+                        type: "POST",
+                        data: {
+                            action: "make_contact",
+                            data: data
+                        },
+                        success: function( response ) {
+                            if ( typeof response !== "undefined" ) {
+                                let result = JSON.parse( response );
+                                if ( result ) {
+                                    alert( "Message was sent succesfully!" );
+                                    window.location.reload();
                                 }
                             }
                         },

@@ -437,7 +437,7 @@ article {
             font-family: $opensansregular;
             font-size: 1.25vw;
             margin: 0 auto 1vw;
-            line-height: 150%;
+            line-height: 175%;
 
             &:last-of-type {
                 margin: 0 auto;
@@ -809,6 +809,116 @@ article {
                     margin: 0 auto;
                     line-height: 125%;
                 }
+            }
+        }
+    }
+    
+    .contactme-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        input[type="text"],
+        input[type="email"] {
+            display: inline-block;
+            width: 49%;
+            padding-top: 0 !important;
+        }
+
+        select {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        textarea {
+            display: block;
+            width: 100%;
+            min-height: 35vh;
+            margin: 0 auto;
+            resize: vertical;
+        }
+
+        button {
+            display: block;
+            width: auto;
+            margin: 1vw auto 0;
+            background: none;
+            border: 2px solid $lighter_dark;
+            border-radius: 100px;
+            box-shadow: none;
+            outline: 0;
+            text-align: center;
+            padding: 1vw 2vw;
+            cursor: pointer;
+
+            -webkit-transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
+
+            &:hover {
+                background: $blue;
+                color: $white;
+                border: 2px solid $blue;
+            }
+
+            &:disabled {
+                cursor: default;
+                background: none;
+                color: $dark;
+                border: 2px solid $lighter_dark;
+            }
+        }
+
+        .message {
+            display: block;
+            width: 100%;
+            margin: 1vw auto 0;
+            text-align: center;
+            font-family: $opensansregular;
+            font-weight: normal;
+            color: $lighter_dark;
+            font-size: 0.85vw;
+            line-height: 150%;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea,
+        button {
+            font-family: $vidaloka;
+            font-size: 1.25vw;
+            font-weight: normal;
+            color: $dark;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            border: none;
+            border-bottom: 2px solid $lighter_dark;
+            background: none;
+            border-radius: 0;
+            line-height: 125%;
+            outline: 0;
+            padding: 1vw 0;
+
+            -webkit-transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
+
+            &::placeholder {
+                color: $dark;
+            }
+
+            &:focus {
+                border-bottom: 2px solid $blue;
             }
         }
     }
