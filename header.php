@@ -9,13 +9,13 @@
  * @package Gero\'s
  */
 
-$device = !is_mobile() && !is_tablet() ? "desktop" : ( is_mobile() ? "mobile" : "tablet" );
+$device = !is_mobile() && !is_tablet() ? "desktop" : ( is_mobile() ? "mobile animated fadeIn hidden" : "tablet animated fadeIn hidden" );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<script src="https://kit.fontawesome.com/935f25a75d.js" crossorigin="anonymous"></script>
 	<script type="text/javascript">

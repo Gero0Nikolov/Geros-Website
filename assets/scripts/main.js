@@ -142,6 +142,8 @@ function setViewPortStyle() {
                 jQuery( "body" ).removeClass( "landscape" ).addClass( "portrait" );
             }
         } );
+
+        jQuery( "body" ).removeClass( "hidden" );
     }
 }
 

@@ -1,5 +1,11 @@
+html {
+  padding: env(safe-area-inset); }
+
 body {
   background-color: #ecf0f1; }
+
+.hidden {
+  display: none; }
 
 .invisible-anchor {
   text-decoration: none;
@@ -36,7 +42,11 @@ body {
   align-items: center;
   justify-content: flex-start;
   background: #000;
-  padding: 0 5.5vw; }
+  padding: 0 5.5vw;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out; }
   .portrait .main-menu-nav-line #main-menu-nav-trigger {
     display: inline-block;
     background: none;
@@ -45,7 +55,11 @@ body {
     position: relative;
     padding: 0;
     width: 7vw;
-    outline: 0; }
+    outline: 0;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
     .portrait .main-menu-nav-line #main-menu-nav-trigger.menu-in .bar:nth-of-type(2) {
       width: 80%; }
     .portrait .main-menu-nav-line #main-menu-nav-trigger.menu-in .bar:nth-of-type(3) {
@@ -74,7 +88,11 @@ body {
     font-family: "Vidaloka-Regular", serif;
     font-weight: normal;
     color: #fff;
-    font-size: 6vw; }
+    font-size: 6vw;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
 .portrait .main-menu {
   display: flex;
   flex-direction: column;
@@ -143,7 +161,11 @@ body {
 .portrait .content-container {
   margin-top: 7vh;
   padding-bottom: 5.5vw;
-  position: relative; }
+  position: relative;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out; }
   .portrait .content-container .search-container {
     display: flex;
     flex-direction: row;
@@ -151,7 +173,11 @@ body {
     justify-content: space-between;
     padding: 5.5vw;
     position: relative;
-    z-index: 9; }
+    z-index: 99;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
     .portrait .content-container .search-container .search-box {
       display: inline-flex;
       vertical-align: middle;
@@ -206,7 +232,11 @@ body {
       overflow: hidden;
       -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
       -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
-      box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25); }
+      box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
       .portrait .content-container .search-container .search-results .search-result {
         display: flex;
         flex-direction: row;
@@ -248,7 +278,11 @@ body {
       width: 10vw;
       text-align: center;
       outline: 0;
-      text-decoration: none; }
+      text-decoration: none;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
       .portrait .content-container .search-container .logo-anchor img {
         display: block;
         margin: 0 auto;
@@ -262,7 +296,11 @@ body {
     height: 60vh;
     margin: 0 auto;
     background-size: cover;
-    background-position: center; }
+    background-position: center;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
     .portrait .content-container .intro-container .overlay {
       display: flex;
       flex-direction: column;
@@ -279,7 +317,11 @@ body {
         width: 60vw;
         max-width: 600px;
         border-radius: 100%;
-        margin: 0 auto 2vw; }
+        margin: 0 auto 2vw;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out; }
       .portrait .content-container .intro-container .overlay .name {
         display: block;
         position: relative;
@@ -289,7 +331,11 @@ body {
         color: #fff;
         text-align: center;
         margin: 0 auto;
-        line-height: 125%; }
+        line-height: 125%;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out; }
       .portrait .content-container .intro-container .overlay .quote {
         display: block;
         position: relative;
@@ -310,7 +356,11 @@ body {
     padding-top: 5.5vw;
     padding-bottom: 5.5vw; }
   .portrait .content-container .section {
-    margin-bottom: 5.5vw; }
+    margin-bottom: 5.5vw;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
     .portrait .content-container .section:last-of-type {
       margin: 0; }
     .portrait .content-container .section.latest-articles, .portrait .content-container .section.latest-projects {
@@ -322,7 +372,11 @@ body {
       font-size: 7vw;
       margin: 2vw auto 1vw;
       line-height: 125%;
-      color: #111; }
+      color: #111;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
       .portrait .content-container .section h1.section-title,
       .portrait .content-container .section h2.section-title {
         margin: 0 auto 1vw; }
@@ -342,7 +396,11 @@ body {
       font-family: "Vidaloka-Regular", serif;
       font-weight: normal;
       margin: 2vw auto 1vw;
-      line-height: 125%; }
+      line-height: 125%;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
     .portrait .content-container .text-content h1,
     .portrait .content-container .text-content h2 {
       font-size: 7vw; }
@@ -357,26 +415,43 @@ body {
       font-family: "OpenSans-Regular", sans-serif;
       font-size: 3.5vw;
       margin: 0 auto 1vw;
-      line-height: 175%; }
+      line-height: 175%;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
       .portrait .content-container .text-content p:last-of-type {
         margin: 0 auto; }
     .portrait .content-container .text-content a {
       display: inline-block;
       vertical-align: baseline;
       color: #2196f3;
-      text-decoration: none; }
+      text-decoration: none;
+      font-size: 3.5vw;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
       .portrait .content-container .text-content a:hover {
         color: #2962FF; }
     .portrait .content-container .text-content img {
       display: block;
       margin: 0 auto 1vw;
-      border-radius: 10px; }
+      border-radius: 10px;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
     .portrait .content-container .text-content ol,
     .portrait .content-container .text-content ul {
       font-family: "OpenSans-Regular", sans-serif;
       font-size: 3.5vw;
       margin: 0 auto 1vw;
-      padding: 0 5.5vw 0; }
+      padding: 0 5.5vw 0;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
     .portrait .content-container .text-content blockquote {
       font-family: "Vidaloka-Regular", serif;
       font-size: 3.5vw;
@@ -384,7 +459,11 @@ body {
       margin: 0 auto 1vw;
       padding: 1vw 2vw;
       background: #BDBDBD;
-      border-radius: 10px; }
+      border-radius: 10px;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
       .portrait .content-container .text-content blockquote p {
         font-family: "Vidaloka-Regular", serif;
         font-size: 3.5vw;
@@ -394,13 +473,21 @@ body {
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    -webkit-overflow-scrolling: touch; }
+    -webkit-overflow-scrolling: touch;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
     .portrait .content-container .latest-articles .articles-container .invisible-anchor {
       display: inline-block;
       width: 92.5%;
       color: #111;
       margin-right: 5.5vw;
-      vertical-align: top; }
+      vertical-align: top;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
       .portrait .content-container .latest-articles .articles-container .invisible-anchor:last-of-type {
         margin: 0; }
       .portrait .content-container .latest-articles .articles-container .invisible-anchor .article-banner {
@@ -425,7 +512,11 @@ body {
         margin: 0 auto;
         line-height: 125%;
         word-break: break-word;
-        white-space: normal; }
+        white-space: normal;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out; }
   .portrait .content-container .latest-projects .projects-container {
     padding: 0 5.5vw 2vw;
     white-space: nowrap;
@@ -533,34 +624,12 @@ body {
         margin-bottom: 5.25vw;
         padding-bottom: 0;
         border: none; }
-        .portrait .content-container .posts-container .article.project:nth-last-of-type(1)
-        .portrait .content-container .posts-container .article.project:nth-last-of-type(2),
-        .portrait .content-container .posts-container .project.project:nth-last-of-type(1)
-        .portrait .content-container .posts-container .article.project:nth-last-of-type(2),
-        .portrait .content-container .projects-posts-container .article.project:nth-last-of-type(1)
-        .portrait .content-container .posts-container .article.project:nth-last-of-type(2),
-        .portrait .content-container .projects-posts-container .project.project:nth-last-of-type(1)
-        .portrait .content-container .posts-container .article.project:nth-last-of-type(2), .portrait .content-container .posts-container .article.project:nth-last-of-type(1)
+        .portrait .content-container .posts-container .article.project:nth-last-of-type(1), .portrait .content-container .posts-container .article.project:nth-last-of-type(2),
+        .portrait .content-container .posts-container .project.project:nth-last-of-type(1),
         .portrait .content-container .posts-container .project.project:nth-last-of-type(2),
-        .portrait .content-container .posts-container .project.project:nth-last-of-type(1)
-        .portrait .content-container .posts-container .project.project:nth-last-of-type(2),
-        .portrait .content-container .projects-posts-container .article.project:nth-last-of-type(1)
-        .portrait .content-container .posts-container .project.project:nth-last-of-type(2),
-        .portrait .content-container .projects-posts-container .project.project:nth-last-of-type(1)
-        .portrait .content-container .posts-container .project.project:nth-last-of-type(2), .portrait .content-container .posts-container .article.project:nth-last-of-type(1)
+        .portrait .content-container .projects-posts-container .article.project:nth-last-of-type(1),
         .portrait .content-container .projects-posts-container .article.project:nth-last-of-type(2),
-        .portrait .content-container .posts-container .project.project:nth-last-of-type(1)
-        .portrait .content-container .projects-posts-container .article.project:nth-last-of-type(2),
-        .portrait .content-container .projects-posts-container .article.project:nth-last-of-type(1)
-        .portrait .content-container .projects-posts-container .article.project:nth-last-of-type(2),
-        .portrait .content-container .projects-posts-container .project.project:nth-last-of-type(1)
-        .portrait .content-container .projects-posts-container .article.project:nth-last-of-type(2), .portrait .content-container .posts-container .article.project:nth-last-of-type(1)
-        .portrait .content-container .projects-posts-container .project.project:nth-last-of-type(2),
-        .portrait .content-container .posts-container .project.project:nth-last-of-type(1)
-        .portrait .content-container .projects-posts-container .project.project:nth-last-of-type(2),
-        .portrait .content-container .projects-posts-container .article.project:nth-last-of-type(1)
-        .portrait .content-container .projects-posts-container .project.project:nth-last-of-type(2),
-        .portrait .content-container .projects-posts-container .project.project:nth-last-of-type(1)
+        .portrait .content-container .projects-posts-container .project.project:nth-last-of-type(1),
         .portrait .content-container .projects-posts-container .project.project:nth-last-of-type(2) {
           margin-bottom: 0;
           padding-bottom: 0; }
@@ -591,7 +660,11 @@ body {
         display: block;
         font-family: "Vidaloka-Regular", serif;
         font-size: 5vw;
-        margin-bottom: 1vw; }
+        margin-bottom: 1vw;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out; }
       .portrait .content-container .posts-container .article .thumbnail,
       .portrait .content-container .posts-container .project .thumbnail,
       .portrait .content-container .projects-posts-container .article .thumbnail,
@@ -618,21 +691,33 @@ body {
         font-weight: normal;
         font-size: 7vw;
         margin: 0 auto 1vw;
-        line-height: 125%; }
-      .portrait .content-container .posts-container .article .content,
-      .portrait .content-container .posts-container .project .content,
-      .portrait .content-container .projects-posts-container .article .content,
-      .portrait .content-container .projects-posts-container .project .content {
+        line-height: 125%;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out; }
+      .portrait .content-container .posts-container .article .excerpt,
+      .portrait .content-container .posts-container .project .excerpt,
+      .portrait .content-container .projects-posts-container .article .excerpt,
+      .portrait .content-container .projects-posts-container .project .excerpt {
         font-family: "OpenSans-Regular", sans-serif;
         font-weight: normal;
         font-size: 3.5vw;
-        color: #111; }
+        color: #111;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out; }
   .portrait .content-container .single-article-container .post-thumbnail-container {
     display: block;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    margin-bottom: 1vw; }
+    margin-bottom: 1vw;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
     .portrait .content-container .single-article-container .post-thumbnail-container .thumbnail {
       display: block;
       margin: 0 auto;
@@ -640,7 +725,11 @@ body {
       height: 30vh;
       border-radius: 10px;
       object-fit: cover;
-      position: relative; }
+      position: relative;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
     .portrait .content-container .single-article-container .post-thumbnail-container .overlay {
       display: block;
       position: absolute;
@@ -651,7 +740,11 @@ body {
       padding: 5vw 5vw;
       transform: translateX(-50%);
       border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px; }
+      border-bottom-right-radius: 10px;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
       .portrait .content-container .single-article-container .post-thumbnail-container .overlay .post-header {
         display: block;
         margin: 0 auto 1vw;
@@ -661,7 +754,11 @@ body {
         font-size: 6vw;
         color: #fff;
         line-height: 125%;
-        border-bottom: 3px solid #9E9E9E; }
+        border-bottom: 3px solid #9E9E9E;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out; }
       .portrait .content-container .single-article-container .post-thumbnail-container .overlay .date {
         display: block;
         margin: 0 auto;
@@ -669,7 +766,11 @@ body {
         font-weight: normal;
         font-size: 4vw;
         color: #fff;
-        line-height: 125%; }
+        line-height: 125%;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out; }
   .portrait .content-container .single-project-container .post-thumbnail-container {
     display: flex;
     flex-direction: row;
@@ -754,7 +855,11 @@ body {
       font-weight: normal;
       color: #2d3436;
       font-size: 2vw;
-      line-height: 150%; }
+      line-height: 150%;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
     .portrait .content-container .contactme-container input[type="text"],
     .portrait .content-container .contactme-container input[type="email"],
     .portrait .content-container .contactme-container select,

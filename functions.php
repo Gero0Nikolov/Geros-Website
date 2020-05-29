@@ -157,12 +157,13 @@ function geros_scripts() {
 	) {
 		wp_enqueue_style( "geros-desktop", get_template_directory_uri() ."/assets/styles/desktop.css", array(), $_ASSETS_VERSION );
 	} else if ( is_mobile() ) {
-		wp_enqueue_style( "geros-mobile", get_template_directory_uri() ."/assets/styles/mobile-portrait.css", array(), $_ASSETS_VERSION );
-		wp_enqueue_style( "geros-mobile", get_template_directory_uri() ."/assets/styles/mobile-landscape.css", array(), $_ASSETS_VERSION );
+		wp_enqueue_style( "geros-mobile-portrait", get_template_directory_uri() ."/assets/styles/mobile-portrait.css", array(), $_ASSETS_VERSION );
+		wp_enqueue_style( "geros-mobile-landscape", get_template_directory_uri() ."/assets/styles/mobile-landscape.css", array(), $_ASSETS_VERSION );
 		wp_enqueue_script( "geros-mobile-main", get_template_directory_uri() ."/assets/scripts/mobile-main.js", array( "jquery" ), $_ASSETS_VERSION, false );
 	} else if ( is_tablet() ) {
-		wp_enqueue_style( "geros-tablet", get_template_directory_uri() ."/assets/styles/tablet-portrait.css", array(), $_ASSETS_VERSION );
-		wp_enqueue_style( "geros-tablet", get_template_directory_uri() ."/assets/styles/tablet-landscape.css", array(), $_ASSETS_VERSION );
+		wp_enqueue_style( "geros-tablet-portrait", get_template_directory_uri() ."/assets/styles/tablet-portrait.css", array(), $_ASSETS_VERSION );
+		wp_enqueue_style( "geros-tablet-landscape", get_template_directory_uri() ."/assets/styles/tablet-landscape.css", array(), $_ASSETS_VERSION );
+		wp_enqueue_script( "geros-tablet-main", get_template_directory_uri() ."/assets/scripts/tablet-main.js", array( "jquery" ), $_ASSETS_VERSION, false );
 	}
 
 	// Load Fonts

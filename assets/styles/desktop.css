@@ -332,7 +332,8 @@ article {
       display: inline-block;
       vertical-align: baseline;
       color: #2196f3;
-      text-decoration: none; }
+      text-decoration: none;
+      font-size: 1.25vw; }
       .content-container .text-content a:hover {
         color: #2962FF; }
     .content-container .text-content img {

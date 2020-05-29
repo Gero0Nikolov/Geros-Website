@@ -22,8 +22,16 @@ $opensansbold: "OpenSans-ExtraBold", sans-serif;
 $radius: 10px;
 
 // Structure
+html {
+    padding: env(safe-area-inset);
+}
+
 body {
     background-color: $body;
+}
+
+.hidden {
+    display: none;
 }
 
 .invisible-anchor {
@@ -72,6 +80,11 @@ body {
         background: $black;
         padding: 0 5.5vw;
 
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+
         #main-menu-nav-trigger {
             display: inline-block;
             background: none;
@@ -81,6 +94,11 @@ body {
             padding: 0;
             width: 7vw;
             outline: 0;
+
+            -webkit-transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
 
             &.menu-in {
                 .bar:nth-of-type(2) {
@@ -122,7 +140,12 @@ body {
             font-family: $vidaloka;
             font-weight: normal;
             color: $white;
-            font-size: 6vw;    
+            font-size: 6vw;
+
+            -webkit-transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
         }
     }
 
@@ -213,6 +236,11 @@ body {
         padding-bottom: 5.5vw;
         position: relative;
 
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+
         .search-container {
             display: flex;
             flex-direction: row;
@@ -220,7 +248,12 @@ body {
             justify-content: space-between;
             padding: 5.5vw;
             position: relative;
-            z-index: 9;
+            z-index: 99;
+
+            -webkit-transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
 
             .search-box {
                 display: inline-flex;
@@ -284,7 +317,12 @@ body {
                 overflow: hidden;
                 -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.25);
                 -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.25);
-                box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.25); 
+                box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.25);
+
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
 
                 .search-result {
                     display: flex;
@@ -343,6 +381,11 @@ body {
                 outline: 0;
                 text-decoration: none;
 
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
+
                 img {
                     display: block;
                     margin: 0 auto;
@@ -362,6 +405,11 @@ body {
             background-size: cover;
             background-position: center;
 
+            -webkit-transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
+
             .overlay {
                 display: flex;
                 flex-direction: column;
@@ -380,6 +428,11 @@ body {
                     max-width: 600px;
                     border-radius: 100%;
                     margin: 0 auto 2vw;
+
+                    -webkit-transition: all 0.25s ease-in-out;
+                    -moz-transition: all 0.25s ease-in-out;
+                    -o-transition: all 0.25s ease-in-out;
+                    transition: all 0.25s ease-in-out;
                 }
 
                 .name {
@@ -392,6 +445,11 @@ body {
                     text-align: center;
                     margin: 0 auto;
                     line-height: 125%;
+
+                    -webkit-transition: all 0.25s ease-in-out;
+                    -moz-transition: all 0.25s ease-in-out;
+                    -o-transition: all 0.25s ease-in-out;
+                    transition: all 0.25s ease-in-out;
                 }
 
                 .quote {
@@ -423,6 +481,11 @@ body {
 
         .section {
             margin-bottom: 5.5vw;
+
+            -webkit-transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
     
             &:last-of-type {
                 margin: 0;
@@ -441,6 +504,11 @@ body {
                 margin: 2vw auto 1vw;
                 line-height: 125%;
                 color: $dark;
+
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
     
                 &.section-title {
                     margin: 0 auto 1vw;
@@ -468,6 +536,11 @@ body {
                 font-weight: normal;
                 margin: 2vw auto 1vw;
                 line-height: 125%;
+
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
             }
     
             h1,
@@ -493,6 +566,11 @@ body {
                 font-size: 3.5vw;
                 margin: 0 auto 1vw;
                 line-height: 175%;
+
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
     
                 &:last-of-type {
                     margin: 0 auto;
@@ -504,6 +582,12 @@ body {
                 vertical-align: baseline;
                 color: $blue;
                 text-decoration: none;
+                font-size: 3.5vw;
+
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
     
                 &:hover {
                     color: $dark_blue;
@@ -514,6 +598,11 @@ body {
                 display: block;
                 margin: 0 auto 1vw;
                 border-radius: $radius;
+
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
             }
     
             ol,
@@ -522,6 +611,11 @@ body {
                 font-size: 3.5vw;
                 margin: 0 auto 1vw;
                 padding: 0 5.5vw 0;
+
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
             }
     
             blockquote {
@@ -532,6 +626,11 @@ body {
                 padding: 1vw 2vw;
                 background: $semi_gray;
                 border-radius: $radius;
+
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
     
                 p {
                     font-family: $vidaloka;
@@ -549,12 +648,22 @@ body {
                 overflow-y: hidden;
                 -webkit-overflow-scrolling: touch;
 
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
+
                 .invisible-anchor {
                     display: inline-block;
                     width: 92.5%;
                     color: $dark;
                     margin-right: 5.5vw;
                     vertical-align: top;
+
+                    -webkit-transition: all 0.25s ease-in-out;
+                    -moz-transition: all 0.25s ease-in-out;
+                    -o-transition: all 0.25s ease-in-out;
+                    transition: all 0.25s ease-in-out;
 
                     &:last-of-type {
                         margin: 0;
@@ -585,6 +694,11 @@ body {
                         line-height: 125%;
                         word-break: break-word;
                         white-space: normal;
+
+                        -webkit-transition: all 0.25s ease-in-out;
+                        -moz-transition: all 0.25s ease-in-out;
+                        -o-transition: all 0.25s ease-in-out;
+                        transition: all 0.25s ease-in-out;
                     }
                 }
             }
@@ -723,7 +837,7 @@ body {
                     padding-bottom: 0;
                     border: none;
 
-                    &:nth-last-of-type(1)
+                    &:nth-last-of-type(1),
                     &:nth-last-of-type(2) {
                         margin-bottom: 0;
                         padding-bottom: 0;
@@ -752,6 +866,11 @@ body {
                     font-family: $vidaloka;
                     font-size: 5vw;
                     margin-bottom: 1vw;
+
+                    -webkit-transition: all 0.25s ease-in-out;
+                    -moz-transition: all 0.25s ease-in-out;
+                    -o-transition: all 0.25s ease-in-out;
+                    transition: all 0.25s ease-in-out;
                 }
 
                 .thumbnail {
@@ -778,13 +897,23 @@ body {
                     font-size: 7vw;
                     margin: 0 auto 1vw;
                     line-height: 125%;
+
+                    -webkit-transition: all 0.25s ease-in-out;
+                    -moz-transition: all 0.25s ease-in-out;
+                    -o-transition: all 0.25s ease-in-out;
+                    transition: all 0.25s ease-in-out;
                 }
 
-                .content {
+                .excerpt {
                     font-family: $opensansregular;
                     font-weight: normal;
                     font-size: 3.5vw;
                     color: $dark;
+
+                    -webkit-transition: all 0.25s ease-in-out;
+                    -moz-transition: all 0.25s ease-in-out;
+                    -o-transition: all 0.25s ease-in-out;
+                    transition: all 0.25s ease-in-out;
                 }
             }
         }
@@ -798,6 +927,11 @@ body {
                 border-radius: $radius;
                 margin-bottom: 1vw;
 
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
+
                 .thumbnail {
                     display: block;
                     margin: 0 auto;
@@ -806,6 +940,11 @@ body {
                     border-radius: $radius;
                     object-fit: cover;
                     position: relative;
+
+                    -webkit-transition: all 0.25s ease-in-out;
+                    -moz-transition: all 0.25s ease-in-out;
+                    -o-transition: all 0.25s ease-in-out;
+                    transition: all 0.25s ease-in-out;
                 }
 
                 .overlay {
@@ -820,6 +959,11 @@ body {
                     border-bottom-left-radius: $radius;
                     border-bottom-right-radius: $radius;
 
+                    -webkit-transition: all 0.25s ease-in-out;
+                    -moz-transition: all 0.25s ease-in-out;
+                    -o-transition: all 0.25s ease-in-out;
+                    transition: all 0.25s ease-in-out;
+
                     .post-header {
                         display: block;
                         margin: 0 auto 1vw;
@@ -830,6 +974,11 @@ body {
                         color: $white;
                         line-height: 125%;
                         border-bottom: 3px solid $gray;
+
+                        -webkit-transition: all 0.25s ease-in-out;
+                        -moz-transition: all 0.25s ease-in-out;
+                        -o-transition: all 0.25s ease-in-out;
+                        transition: all 0.25s ease-in-out;
                     }
 
                     .date {
@@ -840,6 +989,11 @@ body {
                         font-size: 4vw;
                         color: $white;
                         line-height: 125%;
+
+                        -webkit-transition: all 0.25s ease-in-out;
+                        -moz-transition: all 0.25s ease-in-out;
+                        -o-transition: all 0.25s ease-in-out;
+                        transition: all 0.25s ease-in-out;
                     }
                 }
             }
@@ -956,6 +1110,11 @@ body {
                 color: $lighter_dark;
                 font-size: 2vw;
                 line-height: 150%;
+
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
             }
     
             input[type="text"],
