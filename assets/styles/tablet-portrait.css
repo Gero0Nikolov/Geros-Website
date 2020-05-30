@@ -118,6 +118,8 @@ body {
     display: block;
     width: 100%;
     position: relative; }
+    .portrait .main-menu .upper-context .site-header {
+      display: none; }
     .portrait .main-menu .upper-context .items {
       display: block;
       position: relative; }
@@ -453,7 +455,7 @@ body {
       transition: all 0.25s ease-in-out; }
     .portrait .content-container .text-content blockquote {
       font-family: "Vidaloka-Regular", serif;
-      font-size: 2.75vw;
+      font-size: 3vw;
       font-weight: normal;
       margin: 0 auto 1vw;
       padding: 1vw 2vw;
@@ -465,7 +467,7 @@ body {
       transition: all 0.25s ease-in-out; }
       .portrait .content-container .text-content blockquote p {
         font-family: "Vidaloka-Regular", serif;
-        font-size: 2.75vw;
+        font-size: 3vw;
         font-weight: normal; }
   .portrait .content-container .latest-articles .articles-container {
     padding: 0 5.5vw 2vw;

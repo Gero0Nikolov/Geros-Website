@@ -548,13 +548,13 @@ article {
         font-size: 1.5vw;
         margin: 0 auto 0.5vw;
         line-height: 125%; }
-      .content-container .posts-container .article .content,
-      .content-container .posts-container .project .content,
-      .content-container .projects-posts-container .article .content,
-      .content-container .projects-posts-container .project .content {
+      .content-container .posts-container .article .excerpt,
+      .content-container .posts-container .project .excerpt,
+      .content-container .projects-posts-container .article .excerpt,
+      .content-container .projects-posts-container .project .excerpt {
         font-family: "OpenSans-Regular", sans-serif;
         font-weight: normal;
-        font-size: 1.25vw;
+        font-size: 1vw;
         color: #111; }
   .content-container .single-article-container .post-thumbnail-container {
     display: block;

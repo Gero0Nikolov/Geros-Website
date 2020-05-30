@@ -442,7 +442,7 @@
       transition: all 0.25s ease-in-out; }
     .landscape .content-container .text-content blockquote {
       font-family: "Vidaloka-Regular", serif;
-      font-size: 2vw;
+      font-size: 2.25vw;
       font-weight: normal;
       margin: 0 auto 0.5vw;
       padding: 1vw 2vw;
@@ -454,7 +454,7 @@
       transition: all 0.25s ease-in-out; }
       .landscape .content-container .text-content blockquote p {
         font-family: "Vidaloka-Regular", serif;
-        font-size: 2vw;
+        font-size: 2.25vw;
         font-weight: normal; }
   .landscape .content-container .latest-articles .articles-container {
     padding: 0 5.5vw 2vw;

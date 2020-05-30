@@ -178,6 +178,8 @@ body {
             width: 100%;
             position: relative;
 
+            .site-header { display: none; }
+
             .items {
                 display: block;
                 position: relative;
@@ -620,7 +622,7 @@ body {
     
             blockquote {
                 font-family: $vidaloka;
-                font-size: 2.75vw;
+                font-size: 3vw;
                 font-weight: normal;
                 margin: 0 auto 1vw;
                 padding: 1vw 2vw;
@@ -634,7 +636,7 @@ body {
     
                 p {
                     font-family: $vidaloka;
-                    font-size: 2.75vw;
+                    font-size: 3vw;
                     font-weight: normal;
                 }
             }
