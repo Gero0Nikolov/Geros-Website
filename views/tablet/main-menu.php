@@ -33,7 +33,7 @@ foreach ( $main_menu_items as $item ) {
 <div id="main-menu" class="main-menu hidden-menu">
     <div class="upper-context">
         <h1 class="site-header"><?php echo !empty( $page_menu_title ) ? $page_menu_title : get_default_title(); ?></h1>
-        <div class="items animated fadeIn">
+        <div class="items">
             <?php 
             foreach ( $menu_items as $item ) {
                 ?>

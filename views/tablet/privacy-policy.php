@@ -1,4 +1,4 @@
-<div class="content-container animated fadeIn">
+<div class="content-container">
     <?php 
     get_view( "search" );
     global $post;

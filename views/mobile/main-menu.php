@@ -32,7 +32,7 @@ foreach ( $main_menu_items as $item ) {
 </div>
 <div id="main-menu" class="main-menu hidden-menu">
     <div class="upper-context">
-        <div class="items animated fadeIn">
+        <div class="items">
             <?php 
             foreach ( $menu_items as $item ) {
                 ?>

@@ -26,7 +26,7 @@ $links->title = get_field( "links_title", $page_id );
 $links->links = get_field( "website_links", $page_id );
 ?>
 
-<div class="content-container animated fadeIn">
+<div class="content-container">
     <?php get_view( "search" ); ?>
     <div id="intro-container" class="intro-container" style="background-image: url(<?php echo $banner_image; ?>);">
         <div class="overlay">

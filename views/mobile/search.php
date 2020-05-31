@@ -5,7 +5,7 @@ $placeholder = get_field( "search_container_input", $front_page_id );
 $logo = get_field( "search_container_logo", $front_page_id );
 ?>
 
-<div id="search-container" class="search-container animated fadeIn">
+<div id="search-container" class="search-container">
     <div id="search-box" class="search-box">
         <i class="fas fa-search"></i>
         <input type="text" placeholder="<?php echo $placeholder; ?>">
