@@ -23,6 +23,16 @@ $device = !is_mobile() && !is_tablet() ? "desktop" : ( is_mobile() ? "mobile ani
 	</script>
 
 	<?php wp_head(); ?>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71741741-9"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-71741741-9');
+	</script>
 </head>
 
 <body <?php body_class( $device ); ?>>
