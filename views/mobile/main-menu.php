@@ -18,6 +18,7 @@ foreach ( $main_menu_items as $item ) {
     $item_->title = $item->title;
     $item_->color = get_field( "page_color", $item_->id );
     $item_->icon  = get_field( "page_icon", $item_->id );
+    $item_->target = !empty( $item->target ) ? $item->target : "_top";
     array_push( $menu_items, $item_ );
 }
 ?>
@@ -37,7 +38,7 @@ foreach ( $main_menu_items as $item ) {
             foreach ( $menu_items as $item ) {
                 ?>
 
-                <a href="<?php echo $item->url; ?>" class="menu-item">
+                <a href="<?php echo $item->url; ?>" target="<?php echo $item->target; ?>" class="menu-item">
                     <span class="color" style="background-color: <?php echo $item->color; ?>;">
                         <i class="<?php echo $item->icon; ?>"></i>
                     </span>
