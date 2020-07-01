@@ -714,5 +714,85 @@ article {
       .content-container .contactme-container select:focus,
       .content-container .contactme-container textarea:focus {
         border-bottom: 2px solid #2196f3; }
+  .content-container .tech-stack-container,
+  .content-container .business-stack-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .content-container .tech-stack-container .tech-stack-anchor,
+    .content-container .tech-stack-container .business-stack-anchor,
+    .content-container .business-stack-container .tech-stack-anchor,
+    .content-container .business-stack-container .business-stack-anchor {
+      font-family: "Vidaloka-Regular", serif;
+      font-size: 1.25vw;
+      margin: 0.65vw 0;
+      line-height: 175%;
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      width: 32%;
+      position: relative;
+      color: #111 !important;
+      background: #fff;
+      padding: 0.85vw;
+      border-radius: 10px;
+      outline: 0;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
+      .content-container .tech-stack-container .tech-stack-anchor br,
+      .content-container .tech-stack-container .business-stack-anchor br,
+      .content-container .business-stack-container .tech-stack-anchor br,
+      .content-container .business-stack-container .business-stack-anchor br {
+        display: none; }
+      .content-container .tech-stack-container .tech-stack-anchor .logo,
+      .content-container .tech-stack-container .tech-stack-anchor .label,
+      .content-container .tech-stack-container .business-stack-anchor .logo,
+      .content-container .tech-stack-container .business-stack-anchor .label,
+      .content-container .business-stack-container .tech-stack-anchor .logo,
+      .content-container .business-stack-container .tech-stack-anchor .label,
+      .content-container .business-stack-container .business-stack-anchor .logo,
+      .content-container .business-stack-container .business-stack-anchor .label {
+        display: inline-block;
+        vertical-align: middle; }
+      .content-container .tech-stack-container .tech-stack-anchor .logo,
+      .content-container .tech-stack-container .business-stack-anchor .logo,
+      .content-container .business-stack-container .tech-stack-anchor .logo,
+      .content-container .business-stack-container .business-stack-anchor .logo {
+        font-size: 1.85vw; }
+      .content-container .tech-stack-container .tech-stack-anchor .label,
+      .content-container .tech-stack-container .business-stack-anchor .label,
+      .content-container .business-stack-container .tech-stack-anchor .label,
+      .content-container .business-stack-container .business-stack-anchor .label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+        text-align: center;
+        line-height: 125%; }
+      .content-container .tech-stack-container .tech-stack-anchor:hover,
+      .content-container .tech-stack-container .business-stack-anchor:hover,
+      .content-container .business-stack-container .tech-stack-anchor:hover,
+      .content-container .business-stack-container .business-stack-anchor:hover {
+        -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
+        transform: translateY(-2.5%) translateZ(0); }
+      .content-container .tech-stack-container .tech-stack-anchor.business-stack-anchor,
+      .content-container .tech-stack-container .business-stack-anchor.business-stack-anchor,
+      .content-container .business-stack-container .tech-stack-anchor.business-stack-anchor,
+      .content-container .business-stack-container .business-stack-anchor.business-stack-anchor {
+        font-size: 1vw;
+        width: 24%; }
+        .content-container .tech-stack-container .tech-stack-anchor.business-stack-anchor .logo,
+        .content-container .tech-stack-container .business-stack-anchor.business-stack-anchor .logo,
+        .content-container .business-stack-container .tech-stack-anchor.business-stack-anchor .logo,
+        .content-container .business-stack-container .business-stack-anchor.business-stack-anchor .logo {
+          font-size: 1.6vw; }
 
 /*# sourceMappingURL=desktop.css.map */

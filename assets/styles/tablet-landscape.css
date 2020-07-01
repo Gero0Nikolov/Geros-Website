@@ -706,5 +706,84 @@ body {
       .landscape .content-container .contactme-container select:focus,
       .landscape .content-container .contactme-container textarea:focus {
         border-bottom: 2px solid #2196f3; }
+  .landscape .content-container .tech-stack-container,
+  .landscape .content-container .business-stack-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .landscape .content-container .tech-stack-container .tech-stack-anchor,
+    .landscape .content-container .tech-stack-container .business-stack-anchor,
+    .landscape .content-container .business-stack-container .tech-stack-anchor,
+    .landscape .content-container .business-stack-container .business-stack-anchor {
+      font-family: "Vidaloka-Regular", serif;
+      font-size: 1.25vw;
+      margin: 0.65vw 0;
+      line-height: 175%;
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      width: 32%;
+      position: relative;
+      color: #111 !important;
+      background: #fff;
+      padding: 0.85vw;
+      border-radius: 10px;
+      outline: 0;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
+      .landscape .content-container .tech-stack-container .tech-stack-anchor br,
+      .landscape .content-container .tech-stack-container .business-stack-anchor br,
+      .landscape .content-container .business-stack-container .tech-stack-anchor br,
+      .landscape .content-container .business-stack-container .business-stack-anchor br {
+        display: none; }
+      .landscape .content-container .tech-stack-container .tech-stack-anchor .logo,
+      .landscape .content-container .tech-stack-container .tech-stack-anchor .label,
+      .landscape .content-container .tech-stack-container .business-stack-anchor .logo,
+      .landscape .content-container .tech-stack-container .business-stack-anchor .label,
+      .landscape .content-container .business-stack-container .tech-stack-anchor .logo,
+      .landscape .content-container .business-stack-container .tech-stack-anchor .label,
+      .landscape .content-container .business-stack-container .business-stack-anchor .logo,
+      .landscape .content-container .business-stack-container .business-stack-anchor .label {
+        display: inline-block;
+        vertical-align: middle; }
+      .landscape .content-container .tech-stack-container .tech-stack-anchor .logo,
+      .landscape .content-container .tech-stack-container .business-stack-anchor .logo,
+      .landscape .content-container .business-stack-container .tech-stack-anchor .logo,
+      .landscape .content-container .business-stack-container .business-stack-anchor .logo {
+        font-size: 1.85vw; }
+      .landscape .content-container .tech-stack-container .tech-stack-anchor .label,
+      .landscape .content-container .tech-stack-container .business-stack-anchor .label,
+      .landscape .content-container .business-stack-container .tech-stack-anchor .label,
+      .landscape .content-container .business-stack-container .business-stack-anchor .label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+        text-align: center;
+        line-height: 125%; }
+      .landscape .content-container .tech-stack-container .tech-stack-anchor:hover,
+      .landscape .content-container .tech-stack-container .business-stack-anchor:hover,
+      .landscape .content-container .business-stack-container .tech-stack-anchor:hover,
+      .landscape .content-container .business-stack-container .business-stack-anchor:hover {
+        -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
+        transform: translateY(-2.5%) translateZ(0); }
+      .landscape .content-container .tech-stack-container .tech-stack-anchor.business-stack-anchor,
+      .landscape .content-container .tech-stack-container .business-stack-anchor.business-stack-anchor,
+      .landscape .content-container .business-stack-container .tech-stack-anchor.business-stack-anchor,
+      .landscape .content-container .business-stack-container .business-stack-anchor.business-stack-anchor {
+        width: 32%; }
+        .landscape .content-container .tech-stack-container .tech-stack-anchor.business-stack-anchor:last-of-type,
+        .landscape .content-container .tech-stack-container .business-stack-anchor.business-stack-anchor:last-of-type,
+        .landscape .content-container .business-stack-container .tech-stack-anchor.business-stack-anchor:last-of-type,
+        .landscape .content-container .business-stack-container .business-stack-anchor.business-stack-anchor:last-of-type {
+          width: 100%; }
 
 /*# sourceMappingURL=tablet-landscape.css.map */

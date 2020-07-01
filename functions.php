@@ -143,7 +143,7 @@ add_action( 'widgets_init', 'geros_widgets_init' );
  * Enqueue scripts and styles.
  */
 function geros_scripts() {
-	$_ASSETS_VERSION = "1";
+	$_ASSETS_VERSION = 2;
 
 	// Default Styling
 	wp_enqueue_style( 'geros-style', get_stylesheet_uri(), array(), _S_VERSION );
@@ -326,7 +326,47 @@ function get_default_title() {
 		$result = "Enjoy the read!";
 	} elseif ( is_singular( "projects" ) ) {
 		$result = "Feel the idea!";
+	} elseif ( is_404() ) {
+		$result = "Oops. Page not found!";
 	}
 
 	return $result;
+}
+
+add_shortcode( 'tech-stack', 'tech_stack_builder' );
+function tech_stack_builder( $atts ) {
+	$homepage_id = get_option( "page_on_front" );
+	$tech_stack = get_field( "tech_stack", $homepage_id );
+	
+	$grid = "<div id='tech-stack-container' class='tech-stack-container'>";
+
+	foreach ( $tech_stack as $element ) {
+		$grid .= "<a href='". $element[ "url" ] ."' target='_blank' class='tech-stack-anchor'>
+			<i class='logo ". $element[ "icon" ] ."' style='color: ". $element[ "color" ] .";'></i>
+			<span class='label'>". $element[ "label" ] ."</span>
+		</a>";
+	}
+
+	$grid .= "</div>";
+
+	return $grid;
+}
+
+add_shortcode( 'business-stack', 'business_stack_builder' );
+function business_stack_builder( $atts ) {
+	$homepage_id = get_option( "page_on_front" );
+	$business_stack = get_field( "business_stack", $homepage_id );
+	
+	$grid = "<div id='business-stack-container' class='business-stack-container'>";
+
+	foreach ( $business_stack as $element ) {
+		$grid .= "<a href='". $element[ "url" ] ."' class='business-stack-anchor'>
+			<i class='logo ". $element[ "icon" ] ."' style='color: ". $element[ "color" ] .";'></i>
+			<span class='label'>". $element[ "label" ] ."</span>
+		</a>";
+	}
+
+	$grid .= "</div>";
+
+	return $grid;
 }
