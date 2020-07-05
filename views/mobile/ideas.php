@@ -37,4 +37,5 @@
         }
         ?>
     </div>
+    <?php get_view( "footer" ); ?>
 </div>

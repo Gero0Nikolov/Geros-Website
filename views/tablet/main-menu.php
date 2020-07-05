@@ -51,9 +51,4 @@ foreach ( $main_menu_items as $item ) {
             ?>
         </div>
     </div>
-    <footer id="colophon" class="site-footer lower-context">
-		<div class="site-info">
-            <?php echo wpautop( $footer, true ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
 </div>

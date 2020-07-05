@@ -3,7 +3,6 @@ $post_id = get_the_ID();
 $page_color = get_field( "page_color", $post_id );
 
 $front_page_id = get_option( "page_on_front" );
-$footer = str_replace( "[year]", date( "Y" ), get_field( "footer", $front_page_id ) );
 
 $page_menu_title = get_field( "page_menu_title", $post_id );
 $main_menu_items = wp_get_nav_menu_items( 2 );
@@ -43,9 +42,4 @@ foreach ( $main_menu_items as $item ) {
             ?>
         </div>
     </div>
-    <footer id="colophon" class="site-footer lower-context">
-		<div class="site-info">
-            <?php echo wpautop( $footer, true ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
 </div>

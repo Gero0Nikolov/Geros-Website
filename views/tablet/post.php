@@ -24,4 +24,5 @@
             </div>
         </article>
     </main>
+    <?php get_view( "footer" ); ?>
 </div>

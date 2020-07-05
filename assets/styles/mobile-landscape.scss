@@ -1,5 +1,5 @@
 // Colors
-$body: #ecf0f1;
+$body: #F5F7FA;
 $menu: #000;
 $white: #fff;
 $gray: #9E9E9E;
@@ -12,6 +12,7 @@ $dark: #111;
 $lighter_dark: #2d3436;
 $semi_transparent_black: rgba(0, 0, 0, 0.7);
 $darker_transparent_black: rgba(0, 0, 0, 0.9);
+$semi_transparent_gray: rgba(189, 189, 189, 0.15);
 
 // Fonts
 $vidaloka: "Vidaloka-Regular", serif;
@@ -198,19 +199,6 @@ $radius: 10px;
                 }
             }
         }
-
-        footer {
-            display: block;
-            text-align: center;
-            font-family: "Vidaloka-Regular";
-            font-size: 3vw;
-            color: $gray;
-
-            p {
-                margin: 0 auto;
-                line-height: 125%;
-            }
-        }
     }
 
     .content-container {
@@ -378,6 +366,21 @@ $radius: 10px;
                     margin: 0 auto;
                     border-radius: 25%;
                 }
+            }
+        }
+
+        footer {
+            display: block;
+            text-align: center;
+            font-family: "Vidaloka-Regular";
+            font-size: 3vw;
+            color: $gray;
+            margin-top: 2.75vw;
+            padding: 0 5.5vw;
+
+            p {
+                margin: 0 auto;
+                line-height: 125%;
             }
         }
 
@@ -607,8 +610,9 @@ $radius: 10px;
                 font-weight: normal;
                 margin: 0 auto 0.5vw;
                 padding: 1vw 2vw;
-                background: $semi_gray;
-                border-radius: $radius;
+                background: $semi_transparent_gray;
+                border-left: 3px solid $semi_gray;
+                text-align: center;
 
                 -webkit-transition: all 0.25s ease-in-out;
                 -moz-transition: all 0.25s ease-in-out;

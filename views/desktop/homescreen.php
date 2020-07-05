@@ -100,4 +100,5 @@ $links->links = get_field( "website_links", $page_id );
             ?>
         </div>
     </div>
+    <?php get_view( "footer" ); ?>
 </div>

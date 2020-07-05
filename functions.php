@@ -143,7 +143,7 @@ add_action( 'widgets_init', 'geros_widgets_init' );
  * Enqueue scripts and styles.
  */
 function geros_scripts() {
-	$_ASSETS_VERSION = 2;
+	$_ASSETS_VERSION = date("YmdHis");
 
 	// Default Styling
 	wp_enqueue_style( 'geros-style', get_stylesheet_uri(), array(), _S_VERSION );

@@ -33,4 +33,5 @@
         </div>
         <button id="send"><?php echo $data->button; ?></button>
     </div>
+    <?php get_view( "footer" ); ?>
 </div>
